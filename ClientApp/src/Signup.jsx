@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
-export function Signup() {
+export function SignUp() {
   const history = useHistory()
 
   const [errorMessage, setErrorMessage] = useState('')
