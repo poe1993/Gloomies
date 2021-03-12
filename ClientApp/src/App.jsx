@@ -1,8 +1,15 @@
 import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 import './custom.scss'
+import { SignIn } from './SignIn'
+import { SignUp } from './SignUp'
+import { isLoggedIn } from './auth'
 
 export function App() {
   return (
-    <div className="d-flex justify-content-center display-2">Hello, World!</div>
+    <Switch>
+      <Route exact path="/" component={SignIn} />
+      <Route exact path="/signup" component={SignUp} />
+    </Switch>
   )
 }
