@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Identity;
@@ -9,15 +8,13 @@ namespace Gloomies.Models
     {
         public int Id { get; set; }
         [Required]
-        public string UserName { get; set; }
+        public string Name { get; set; }
         [Required]
         public string Email { get; set; }
 
         [JsonIgnore]
         public string HashedPassword { get; set; }
         // Define a property for being able to _set_ a password
-
-        [Required]
         public string Password
         {
             // Define only the `set` aspect of the property
